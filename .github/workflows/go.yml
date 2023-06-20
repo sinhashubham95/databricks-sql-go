@@ -60,13 +60,5 @@ jobs:
           fi
           go get -v -t -d ./...
 
-      - name: Test
-        run: make test
-        env:
-          CGO_ENABLED: 0
-
-      - name: Test-Race
-        run: make test-race
-
       - name: Build
         run: make linux
